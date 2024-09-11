@@ -1,0 +1,97 @@
+.container {
+  position: relative;
+  margin-top: 14rem;
+  padding-bottom: 8rem;
+  height: 50dvh;
+  /* border: 2px solid red; */
+}
+
+.title {
+  font-size: 3.6rem;
+  overflow: hidden;
+
+}
+
+.subhead {
+  font-size: 3rem;
+  margin: 1.6rem 0 0 0;
+}
+
+
+.hero_icons {
+  margin: 3.2rem 0 0 1.2rem;
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+}
+
+.github_container {
+  position: absolute;
+  top: -1rem;
+  right: 12%;
+}
+
+.gmail_container {
+  position: absolute;
+  top: 23rem;
+  right: 29%;
+}
+
+
+.linkedin_container {
+  position: absolute;
+  top: 24rem;
+  right: 75%;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    margin-top: 12rem;
+    padding-bottom: 14rem;
+    height: 75dvh;
+  }
+  .title {
+    font-size: 4.0rem;
+  }
+
+  .subhead {
+    font-size: var(--h2-font-size);
+  }
+
+  .github_container {
+    right: 20%;
+  }
+  
+  .gmail_container {
+    top: 22rem;
+    right: 33%;
+  }
+  
+  
+  .linkedin_container {
+    top: 24rem;
+    right: 80%;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .hero_icons {
+    margin: initial;
+  }
+
+  .github_container {
+    right: 38%;
+  }
+  
+  .gmail_container {
+    top: 24rem;
+    right: 33%;
+  }
+  
+  
+  .linkedin_container {
+    top: 28rem;
+    right: 87%;
+  }
+}

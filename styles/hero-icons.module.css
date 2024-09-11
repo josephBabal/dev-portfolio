@@ -1,0 +1,61 @@
+/* icons */
+.icon_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github_bg, .gmail_bg, .linkedin_bg {
+  position: absolute;
+  padding: 3.25rem; 
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.github_bg {
+  background-color: rgba(131, 127, 127, 0.137);
+}
+
+.linkedin_bg {
+  background-color: rgba(19, 117, 236, 0.137);
+}
+
+.gmail_bg {
+  background-color: rgba(236, 66, 19, 0.089);
+}
+
+.icon_container:hover .github_bg,
+.icon_container:focus .github_bg,
+.icon_container:hover .linkedin_bg,
+.icon_container:focus .linkedin_bg,
+.icon_container:hover .gmail_bg,
+.icon_container:focus .gmail_bg {
+  transform: scale(1.2);
+}
+
+.icon_container .icon {
+  position: relative;
+  display: block;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+@media screen and (min-width: 480px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+  .github_bg, .gmail_bg, .linkedin_bg {
+    padding: 3.75rem; 
+  }
+
+  .icon_container .icon {
+    width: 48px;
+    height: 48px;
+  }
+}
