@@ -5,21 +5,6 @@ import { DELAY, START_DURATION } from '@/utils/config'
 import { MotionDiv } from './MotionDiv'
 import { motion } from 'framer-motion'
 
-const containerVariants = {
-  hidden: { },
-  visible: { 
-    transition: { 
-      staggerChildren: 0.1,
-      duration: 0.5, 
-      delay: DELAY + START_DURATION
-    } 
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1},
-};
 
 const HeroIcons = () => {
   return (

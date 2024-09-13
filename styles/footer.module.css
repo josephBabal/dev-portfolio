@@ -1,6 +1,5 @@
 .bg_container {
   padding-block: 4.4rem;
-  margin-top: 14.4rem;
   background: #171717;
   color: #F2F2F2;
 }
@@ -10,8 +9,6 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 8.0rem;
-  max-width: var(--max-width);
-
 }
 
 .content_container .heading {
@@ -32,7 +29,7 @@
   margin-left: auto;
   padding: 1.6rem var(--container-padding);
   border-radius: 50px;
-  background: #FFCB74;
+  background: var(--primary-color);
   color: #111111;
   font-size: 1.8rem;
 }

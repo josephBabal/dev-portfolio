@@ -16,7 +16,7 @@ type IconLinkProps = {
 
 const IconLink: React.FC<IconLinkProps> = ({ index, delay, href, containerClassName, bgClassName, svgProps, paths }) => {
   const containerDuration = 0.4;
-  const combinedDelay = DELAY + START_DURATION + delay;
+  const combinedDelay = START_DURATION + delay;
 
   const containerVariants = {
     hidden: {  scale: 0 },
