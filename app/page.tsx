@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import { MotionDiv } from "@/components/MotionDiv";
 import { DELAY } from "@/utils/config";
+import SectionFooterLayout from "@/components/layouts/SectionFooterLayout";
+import ScrollSection from "@/components/layouts/ScrollSection";
 
 const HomeVariants = {
   hidden: { display: 'none'},
@@ -14,14 +16,10 @@ visible: { display: 'block', transition: { duration: 0.5, ease: "easeIn", delay:
 export default async function Home() {
   return (
     <main className={styles.main}>
-      <MotionDiv variants={HomeVariants}
-        initial='hidden'
-        animate='visible'
-      > 
-        <Hero />
-        <Projects />
-      </MotionDiv>
-    
+      
+      <Hero />
+   
+      <Projects />
     </main>
   );
 }

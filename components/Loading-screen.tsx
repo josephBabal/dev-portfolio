@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from '@/styles/loader.module.css'
-import { motion, useAnimation, useAnimationControls, AnimatePresence } from 'framer-motion'
-
-const animateDuration = 1;
-const delay = 0.5;
+import { motion } from 'framer-motion'
 
 const bgVariants = {
   hidden: { y: 0 },

@@ -47,8 +47,7 @@
 @media screen and (min-width: 480px) {
   .container {
     margin-top: 12rem;
-    padding-bottom: 14rem;
-    height: 75dvh;
+    height: 60dvh;
   }
   .title {
     font-size: 4.0rem;
@@ -76,6 +75,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .content_text {
+    margin-left: 5%;
+  }
+
+
   .hero_icons {
     margin: initial;
   }

@@ -1,14 +1,16 @@
+.bg_container {
+  --bg-color: #f3f3f3;
+  background: var(--bg-color);
+  padding-block: 9.6rem;
+  min-height: 100dvh;
+}
+
 .container {
-  /* padding-top: 23rem; */
   position: relative;
-  /* border: 1px solid red; */
-  /* padding-top: 80px; */
 }
 
 .container .title {
-  /* position: absolute;
-  top: 6.2rem;
-  left: 3.2rem; */
+  font-weight: 400;
 }
 
 .grid {
@@ -22,15 +24,32 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  height: 100%;
+}
+
+.grid > .card .image_container {
+  position: relative; 
+  /* border: 1px solid red; */
+}
+
+.grid > .card .image_container .overlay {
+  position: absolute;
+  top: 0;
+  background: var(--bg-color);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  /* border: 1px solid red; */
 }
 
 .grid > .card .image {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.grid > .card .image.imageDesktop {
+.grid > .card .image_container.imageDesktop {
   display: none;
 }
 
@@ -40,7 +59,8 @@
 }
 
 .content .subtitle {
-  margin-top: 1.2rem;
+  margin-top: .8rem;
+  color: var(--subtitle-color);
 }
 
 
@@ -50,21 +70,23 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8.8rem;
+    margin-top: 1.6rem;
   }
 
   .grid > .card {
     gap: 3.2rem;
   }
 
-  .grid > .card .image.imageMobile {
+  .grid > .card .image_container.imageMobile {
     display: none;
   }
   
-  .grid > .card .image.imageDesktop {
+  .grid > .card .image_container.imageDesktop {
     display: initial;
   }
 
-  .grid > .card:first-child .image {
+  .grid > .card:first-child .image_container,
+  .grid > .card .image_container .overlay {
     margin-top: auto;
   }  
   
@@ -72,7 +94,5 @@
   .grid > .card:nth-child(4n) .image {
     height: 432px;
   }
-  
-  
 
 }
