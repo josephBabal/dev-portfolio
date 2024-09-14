@@ -28,7 +28,7 @@ const textVariants = {
 
 
 
-const ProjectCard = ({ name, subtitle, page, image, imageMobile}: ProjectCardProps) => {
+const ProjectCard = ({ name, subtitle, page, github, image, imageMobile}: ProjectCardProps) => {
   const imageRef = useRef(null);
   // const desktopCardRef = useRef(null);
   
@@ -64,7 +64,7 @@ const ProjectCard = ({ name, subtitle, page, image, imageMobile}: ProjectCardPro
   }, [image, imageMobile]);
 
   return (
-    <Link className={styles.card} href={page}>
+    <Link className={styles.card} href={github}>
       {/* <img 
         src={image} 
         srcSet={`${imageMobile} 768w, ${image} 1440w`}
@@ -90,6 +90,7 @@ const ProjectCard = ({ name, subtitle, page, image, imageMobile}: ProjectCardPro
             className={`${styles.image}`}  
             src={currentImage}
             ref={textRef}
+            loading="lazy"
 
           />
       </div>
