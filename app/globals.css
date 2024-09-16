@@ -34,17 +34,12 @@
 html,
 body {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
   color: var(--text-color);
   background: var(--bg-primary);
   font-size: 1.6rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   margin: 0;
 }
 
@@ -147,7 +142,7 @@ a.nav-link:hover {
 
 .cursor {
   --dimension: 4.8rem;
-  position: fixed;
+  /* position: fixed;
   width: var(--dimension);
   height: var(--dimension);
   border-radius: 50%;
@@ -156,8 +151,8 @@ a.nav-link:hover {
   transform: translate(-50%, -50%);
   transition: background-color 0.3s, transform 0.3s ease;
   z-index: 9999;
-  opacity: 0;
-  overflow: auto;
+  opacity: 0; */
+  /* overflow: auto; */
 }
 
 .cursor.opacity-none {
@@ -203,6 +198,6 @@ a.nav-link:hover {
 
 .scroll-reveal {
   position: relative;
-  height: 110dvh;
+  /* height: 110dvh; */
   z-index: 10;
 }

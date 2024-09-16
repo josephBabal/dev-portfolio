@@ -34,7 +34,7 @@ const Footer = () => {
   const isSocialInView = useInView(socialRef, { once: true, amount: 0 });
 
   return (
-    <footer className={`${styles.container} footer-container`}>
+    <footer className={`footer-container`}>
       <div className={styles.bg_container}>
         <div className={`max-width-primary ${styles.content_container}`}>
           <MotionDiv

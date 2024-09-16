@@ -6,4 +6,7 @@ export type Project = {
   github: string;
   image: string;
   imageMobile: string;
+  alt: string;
+  onGoing: boolean;
+  description: string;
 }

@@ -14,6 +14,9 @@ type ProjectCardProps = {
   github: string;
   image: string;
   imageMobile: string;
+  alt: string;
+  onGoing: boolean;
+  description: string;
 }
 
 const overlayVariants = {
@@ -28,19 +31,13 @@ const textVariants = {
 
 
 
-const ProjectCard = ({ name, subtitle, page, github, image, imageMobile}: ProjectCardProps) => {
-  const imageRef = useRef(null);
-  // const desktopCardRef = useRef(null);
-  
-  const imageInView = useInView(imageRef, { once: true, amount: 0.2 });
-  // const desktopCardInView = useInView(desktopCardRef, { once: true, amount: 0.2 });
+const ProjectCard = ({ name, subtitle, website, page, github, image, imageMobile, alt, onGoing, description }: ProjectCardProps) => {
+  const imageRef = useRef(null);  
+  const imageInView = useInView(imageRef, { once: true, amount: 0.4 });
 
   const textRef = useRef(null);
-  // const textDesktopRef = useRef(null);
-  
-  const textInView = useInView(textRef, { once: true, amount: 1 });
 
-  // const textDesktopInView = useInView(textMobileRef, { once: true, amount: 1 });
+  const textInView = useInView(textRef, { once: true, amount: 1 });
 
 
   const [currentImage, setCurrentImage] = useState(image);
@@ -63,67 +60,45 @@ const ProjectCard = ({ name, subtitle, page, github, image, imageMobile}: Projec
     return () => window.removeEventListener('resize', handleResize);
   }, [image, imageMobile]);
 
+
   return (
-    <Link className={styles.card} href={github}>
-      {/* <img 
-        src={image} 
-        srcSet={`${imageMobile} 768w, ${image} 1440w`}
-        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" 
-        alt="Your Image Description" 
-        style={{objectFit: "cover", maxWidth: '576px', width: '100%' }}
-        decoding="async" 
-        loading="lazy"
-      /> */}
-      <div 
-        className={`${styles.image_container}`}
-        ref={imageRef}
-      >
+    <div className={styles.card}>
+      <Link className={styles.link} href={onGoing ? github : website!}>
+        <div 
+          className={`${styles.image_container}`}
+          ref={imageRef}
+        >
 
-        <motion.div 
-          className={`${styles.overlay}`} 
-          variants={overlayVariants}
-          initial="hidden"
-          animate={imageInView ? "visible" : "hidden"}
-        />
+          <div className={styles.description_container}>
+            <p className={styles.description}>{description}</p>
+          </div>
 
-          <img 
-            className={`${styles.image}`}  
-            src={currentImage}
-            ref={textRef}
-            loading="lazy"
-
+          <motion.div 
+            className={`${styles.overlay}`} 
+            variants={overlayVariants}
+            initial="hidden"
+            animate={imageInView ? "visible" : "hidden"}
           />
-      </div>
-{/* 
-      <div 
-        className={`${styles.image_container} ${styles.imageDesktop}`}
-        ref={desktopCardRef}
-      > 
-
+  
+            <img
+              className={`${styles.image}`}  
+              src={currentImage}
+              ref={textRef}
+              loading="lazy"
+            />
+        {/* </div> */}
+        </div>
         <motion.div 
-          className={`${styles.overlay}`} 
-          variants={overlayVariants}
+          className={styles.content}
+          variants={textVariants}
           initial="hidden"
-          animate={desktopCardInView ? "visible" : "hidden"}
-        />
-
-          <img 
-            className={`${styles.image}`}
-            src={image}
-            ref={textDesktopRef}
-          />  
-      </div> */}
-
-      <motion.div 
-        className={styles.content}
-        variants={textVariants}
-        initial="hidden"
-        animate={textInView ? "visible" : "hidden"}
-      >
-        <h3 className={styles.name}>{name}</h3>
-        <p className={styles.subtitle}> {subtitle}</p>
-      </motion.div>
-    </Link>
+          animate={textInView ? "visible" : "hidden"}
+        >
+          <h3 className={styles.name}>{name}</h3>
+          <p className={styles.subtitle}> {subtitle}</p>
+        </motion.div>
+      </Link>
+    </div>
   )
 }
 

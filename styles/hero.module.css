@@ -1,8 +1,7 @@
 .container {
   position: relative;
-  margin-top: 14rem;
-  padding-bottom: 8rem;
-  height: 50dvh;
+  margin-top: 8rem;
+  padding-bottom: 8.8rem;
   /* border: 2px solid red; */
 }
 
@@ -33,22 +32,19 @@
 
 .gmail_container {
   position: absolute;
-  top: 23rem;
-  right: 29%;
+  top: 17rem;
+  /* right: 29%; */
+  right: 20%;
 }
 
 
 .linkedin_container {
   position: absolute;
-  top: 24rem;
+  top: 20rem;
   right: 75%;
 }
 
 @media screen and (min-width: 480px) {
-  .container {
-    margin-top: 12rem;
-    height: 60dvh;
-  }
   .title {
     font-size: 4.0rem;
   }
@@ -56,25 +52,23 @@
   .subhead {
     font-size: var(--h2-font-size);
   }
-
-  .github_container {
-    right: 20%;
-  }
   
   .gmail_container {
-    top: 22rem;
-    right: 33%;
+    top: 20rem;
   }
   
   
   .linkedin_container {
-    top: 24rem;
-    right: 80%;
+    top: 23rem;
   }
 
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding-bottom: 12rem;
+  }
+
   .content_text {
     margin-left: 5%;
   }
@@ -89,13 +83,13 @@
   }
   
   .gmail_container {
-    top: 24rem;
+    top: 21rem;
     right: 33%;
   }
   
   
   .linkedin_container {
-    top: 28rem;
+    top: 25rem;
     right: 87%;
   }
 }

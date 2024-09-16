@@ -1,8 +1,7 @@
 .bg_container {
   --bg-color: #f3f3f3;
   background: var(--bg-color);
-  padding-block: 9.6rem;
-  min-height: 100dvh;
+  padding-block: 8rem;
 }
 
 .container {
@@ -24,11 +23,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .grid > .card .image_container {
   position: relative; 
+  transition: 0.3s ease;
   /* border: 1px solid red; */
 }
 
@@ -39,7 +39,16 @@
   height: 100%;
   width: 100%;
   z-index: 10;
-  /* border: 1px solid red; */
+}
+
+.description_container {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  border: 1px solid red;
+  z-index: 999;
 }
 
 .grid > .card .image {
@@ -49,11 +58,19 @@
   object-fit: cover;
 }
 
-.grid > .card .image_container.imageDesktop {
-  display: none;
+.grid .link:hover .image_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
 }
 
 .content .name {
+  margin-top: 1.6rem;
   font-weight: 500;
   font-size: 2.4rem;
 }
@@ -85,8 +102,7 @@
     display: initial;
   }
 
-  .grid > .card:first-child .image_container,
-  .grid > .card .image_container .overlay {
+  .grid > .card:first-child {
     margin-top: auto;
   }  
   
