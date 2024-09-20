@@ -6,7 +6,10 @@
     "website": null,
     "github": "https://github.com/josephBabal/InspireDev",
     "image": "/img/inspiredev-desk.jpg",
-    "imageMobile": "/img/inspiredev-2000.jpg"
+    "imageMobile": "/img/inspiredev-2000.jpg",
+    "alt": "InspireDev",
+    "onGoing": true,
+    "description": "Resource hub for designers and developers"
   },
   {
     "name": "E-SCoPe",
@@ -15,7 +18,10 @@
     "website": "https://engr-science-teaching-resources.vercel.app/",
     "github": "https://github.com/shanebrownescope/engr-science-teaching-resources",
     "image": "/img/escope.jpg",
-    "imageMobile": "/img/escope-2000.jpg"
+    "imageMobile": "/img/escope-2000.jpg",
+    "alt": "E-SCoPe",
+    "onGoing": false,
+    "description": "Online platform for professors to share and find teaching resources"
   },
   {
     "name": "AnimeDomain",
@@ -24,7 +30,10 @@
     "website": "https://anime-domain.vercel.app/",
     "github": "https://github.com/josephBabal/animeDomain",
     "image": "/img/anime-domain.jpg",
-    "imageMobile": "/img/animedomain-2000.jpg"
+    "imageMobile": "/img/animedomain-2000.jpg",
+    "alt": "AnimeDomain",
+    "onGoing": false,
+    "description": "Website for anime fans to find information about animes"
   },
   {
     "name": "PokeDuelDex",
@@ -33,6 +42,9 @@
     "website": "https://poke-duel-dex.vercel.app/",
     "github": "https://github.com/josephBabal/PokeDuelDex",
     "image": "/img/poke-duel-dex.jpg",
-    "imageMobile": "/img/pokedueldex-2000.jpg"
+    "imageMobile": "/img/pokedueldex-2000.jpg",
+    "alt": "PokeDuelDex",
+    "onGoing": false,
+    "description": "Website that allows you to search for pokemon"
   }
 ]

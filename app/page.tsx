@@ -16,10 +16,10 @@ visible: { display: 'block', transition: { duration: 0.5, ease: "easeIn", delay:
 export default async function Home() {
   return (
     <main className={styles.main}>
-      
       <Hero />
-   
       <Projects />
     </main>
   );
 }
+
+

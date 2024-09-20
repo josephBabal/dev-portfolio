@@ -24,7 +24,7 @@ const Navbar = () => {
       onAnimationComplete={() => console.log("Navbar animation completed")}
     >
       <nav className={`${styles.container} max-width-primary`}>
-        <Link href="/" className={`nav-link`}>
+        <Link href="/" className={``}>
           Joseph
         </Link>
         <Link href="/about" className={`nav-link`}>

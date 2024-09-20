@@ -1,9 +1,12 @@
+import AboutHero from '@/components/about/About-hero';
 import React from 'react'
 
-const page = () => {
+const About = () => {
   return (
-    <div>page</div>
+    <div>
+      <AboutHero />
+    </div>
   )
 }
 
-export default page
+export default About;
