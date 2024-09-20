@@ -6,13 +6,15 @@
 }
 
 .title {
-  font-size: 3.6rem;
+  font-size: 3rem;
+  /* font-size: 3.6rem; */
   overflow: hidden;
 
 }
 
 .subhead {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  /* font-size: 3rem; */
   margin: 1.6rem 0 0 0;
 }
 
@@ -27,23 +29,31 @@
 .github_container {
   position: absolute;
   top: -1rem;
-  right: 12%;
+  right: 14%;
 }
 
 .gmail_container {
   position: absolute;
-  top: 17rem;
+  top: 14rem;
   /* right: 29%; */
-  right: 20%;
+  right: 10%;
 }
 
 
 .linkedin_container {
   position: absolute;
-  top: 20rem;
+  top: 17rem;
   right: 75%;
 }
 
+@media screen and (min-width: 400px) {
+  .github_container {
+    right: 23%;
+  }
+  .gmail_container {
+    right: 17%;
+  }
+}
 @media screen and (min-width: 480px) {
   .title {
     font-size: 4.0rem;
@@ -57,11 +67,24 @@
     top: 20rem;
   }
   
-  
   .linkedin_container {
     top: 23rem;
   }
 
+}
+
+
+@media screen and (min-width: 600px) {
+  .github_container {
+    right: 27%;
+  }
+  .gmail_container {
+    top: 19rem;
+    right: 19%;
+  }
+  .linkedin_container {
+    top: 22rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -79,17 +102,18 @@
   }
 
   .github_container {
-    right: 38%;
+    /* right: 38%; */
+    right: 45%;
   }
   
   .gmail_container {
     top: 21rem;
-    right: 33%;
+    right: 35%;
   }
   
   
   .linkedin_container {
-    top: 25rem;
-    right: 87%;
+    top: 24rem;
+    right: 80%;
   }
 }

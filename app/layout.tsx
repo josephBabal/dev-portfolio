@@ -43,8 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plusJakartaSans.className}>
-        <MainLayout children={children} />
-
+        <MainLayout> {children} </MainLayout>
       </body>
     </html>
   );

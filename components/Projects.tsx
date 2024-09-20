@@ -33,7 +33,7 @@ const Projects = () => {
             initial='hidden'
             animate={isInView ? "visible" : "hidden"} 
           >
-            <h2 className={styles.title}> Projects </h2>
+            <h2 className={`${styles.title} h3`}> Projects </h2>
           </MotionDiv>
         </OverflowHiddenContainer>
 

@@ -23,13 +23,11 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  /* height: 100%; */
 }
 
 .grid > .card .image_container {
   position: relative; 
   transition: 0.3s ease;
-  /* border: 1px solid red; */
 }
 
 .grid > .card .image_container .overlay {
@@ -38,49 +36,127 @@
   background: var(--bg-color);
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 9999;
 }
 
-.description_container {
-
+.grid > .card .image_container::before {
+  /* content: "";
   position: absolute;
   top: 0;
   left: 0;
-  color: white;
-  border: 1px solid red;
-  z-index: 999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  pointer-events: none;
+  z-index: 800;
+  transition: 0.3s ease; */
 }
 
-.grid > .card .image {
+.grid > .card .link {
+  transition: 0.3s ease;
+}
+
+.grid > .card .image_container:hover {
+  /* border: 1px dashed black; */
+}
+
+.grid > .card .image_container:hover::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.grid > .card .image_container .image_wrapper {
   position: relative;
+  transition: 0.3s ease;
+}
+
+.grid > .card .image_container .image_wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: none;
+  pointer-events: none;
+  z-index: 800;
+  transition: 0.3s ease;
+}
+
+.grid > .card .link:hover .image_wrapper::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.grid > .card .link:hover {
+  transform: translate(0, 15px);
+  z-index: 9999;
+}
+
+.info_container {
+  position: absolute;
+  bottom: 25%;
+  padding: 1.5rem;
+  z-index: 800;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.3s ease-out;
+}
+
+.grid .link:hover .info_container {
+  opacity: 1;
+  transform: translateY(0);
+}
+.info {
+  font-size: 2rem;
+}
+
+.ongoing {
+  color: rgb(219, 219, 219);
+  /* font-size: 1.4rem; */
+  margin-top: .8rem;
+}
+
+
+.grid > .card .image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.grid .link:hover .image_container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.content .name_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 999;
+}
+
+
+.name_row .arrow_icon {
+  margin-top: 1.6rem;
+  font-size: 4rem;
+  border-radius: 50%;
+  background: none;
+  transition: 0.3s ease-out;
+}
+
+.grid > .card .link:hover .name_row .arrow_icon,
+.grid > .card .link:focus .name_row .arrow_icon {
+  background: var(--primary-color);
+  transform: rotate(-45deg);
 }
 
 .content .name {
   margin-top: 1.6rem;
   font-weight: 500;
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
 }
 
 .content .subtitle {
-  margin-top: .8rem;
   color: var(--subtitle-color);
 }
-
-
 
 
 @media screen and (min-width: 850px) {

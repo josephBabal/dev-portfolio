@@ -32,6 +32,11 @@
   background: var(--primary-color);
   color: #111111;
   font-size: 1.8rem;
+  transition: 0.3s ease-out;
+}
+
+.connect_container .text_touch:hover {
+  background: var(--primary-color-hover);
 }
 
 .social_container {
@@ -51,8 +56,30 @@
 }
 
 .social_container .icons_container .icon {
+  position: relative;
   font-size: 3.2rem;
+  cursor: pointer;
+  color: white;
 }
+
+
+.social_container .icons_container .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  transition: 0.3s ease-out;
+}
+
+.social_container .icons_container .icon:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 
 @media screen and (min-width: 768px) {
@@ -68,7 +95,7 @@
     font-size: 7.2rem;
   }
 
-  .connect_container .touch_container {
+  .connect_container .touch_btn_container {
     margin-top: 2.4rem;
   }
 
