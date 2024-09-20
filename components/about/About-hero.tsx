@@ -31,7 +31,7 @@ const AboutHero = () => {
           initial="hidden"
           animate="visible"
         >
-          Hi, I'm
+          Hi, I&apos;m
         </motion.div>
 
         <motion.h1
@@ -40,13 +40,12 @@ const AboutHero = () => {
           initial="hidden"
           animate="visible"
         >
-          {" "}
-          Joseph Babal{" "}
+          Joseph Babal
         </motion.h1>
       </div>
       <motion.div variants={imgVariants} initial="hidden" animate="visible">
         <OverflowHiddenContainer>
-          <img className={`${styles.img}`} src="/img/profile.jpg" />
+          <img className={`${styles.img}`} src="/img/profile.jpg" alt="Joseph Babal"/>
         </OverflowHiddenContainer>
       </motion.div>
     </div>
