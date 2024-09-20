@@ -44,7 +44,10 @@ const Footer = () => {
             animate={isConnectInView ? "visible" : "hidden"}
             ref={connectRef}
           >
-            <h2 className={`${styles.heading} ${styles.text_connect}`} ref={socialRef}>
+            <h2
+              className={`${styles.heading} ${styles.text_connect}`}
+              ref={socialRef}
+            >
               {" "}
               Lets connect
             </h2>

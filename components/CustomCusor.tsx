@@ -1,8 +1,8 @@
 // CustomCursor.tsx
-import useMouseMove from '@/hooks/useMouseMove'; // Adjust the import path
+import useMouseMove from "@/hooks/useMouseMove"; // Adjust the import path
 
 const CustomCursor: React.FC = () => {
-    useMouseMove();
+  useMouseMove();
 
   return <div className="cursor"></div>;
 };

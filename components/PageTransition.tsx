@@ -2,48 +2,46 @@ import { motion } from "framer-motion";
 import styles from "@/styles/MainLayout.module.css";
 
 const pageTransitionVariants = {
-  hidden: { 
-  }, 
+  hidden: {},
   visible: {
-    transition: { 
+    transition: {
       staggerChildren: 0.1,
-      ease: "easeOut" 
-    }
+      ease: "easeOut",
+    },
   },
   exit: {
-    transition: { 
+    transition: {
       delayChildren: 0.35,
       staggerChildren: 0.1,
       staggerDirection: -1,
       ease: "easeOut",
     },
   },
-}
+};
 
 const columnTransitionVariants = {
-  hidden: { 
+  hidden: {
     y: "-100%",
-  }, 
+  },
   visible: {
     y: "0%",
-    transition: { 
-      duration: 0.3, 
-      ease: "easeInOut" 
-    }
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+    },
   },
   exit: {
     y: "-100%",
-    transition: { 
-      duration: 0.3, 
-      ease: "easeOut" 
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
     },
   },
-}
-
+};
 
 export default function PageTransition() {
   return (
-    <motion.div 
+    <motion.div
       variants={pageTransitionVariants}
       initial="hidden"
       animate="visible"

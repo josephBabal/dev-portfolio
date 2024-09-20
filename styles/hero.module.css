@@ -9,7 +9,6 @@
   font-size: 3rem;
   /* font-size: 3.6rem; */
   overflow: hidden;
-
 }
 
 .subhead {
@@ -17,7 +16,6 @@
   /* font-size: 3rem; */
   margin: 1.6rem 0 0 0;
 }
-
 
 .hero_icons {
   margin: 3.2rem 0 0 1.2rem;
@@ -39,7 +37,6 @@
   right: 10%;
 }
 
-
 .linkedin_container {
   position: absolute;
   top: 17rem;
@@ -56,23 +53,21 @@
 }
 @media screen and (min-width: 480px) {
   .title {
-    font-size: 4.0rem;
+    font-size: 4rem;
   }
 
   .subhead {
     font-size: var(--h2-font-size);
   }
-  
+
   .gmail_container {
     top: 20rem;
   }
-  
+
   .linkedin_container {
     top: 23rem;
   }
-
 }
-
 
 @media screen and (min-width: 600px) {
   .github_container {
@@ -96,7 +91,6 @@
     margin-left: 5%;
   }
 
-
   .hero_icons {
     margin: initial;
   }
@@ -105,13 +99,12 @@
     /* right: 38%; */
     right: 45%;
   }
-  
+
   .gmail_container {
     top: 21rem;
     right: 35%;
   }
-  
-  
+
   .linkedin_container {
     top: 24rem;
     right: 80%;

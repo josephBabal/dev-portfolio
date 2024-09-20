@@ -1,5 +1,5 @@
-export const DELAY = parseFloat(process.env.DELAY!)
+export const DELAY = parseFloat(process.env.DELAY!);
 
-export const START_DURATION = parseFloat(process.env.START_DURATION!)
+export const START_DURATION = parseFloat(process.env.START_DURATION!);
 
 export const CustomVisibleEase = [0.42, 0, 0.58, 1.0];

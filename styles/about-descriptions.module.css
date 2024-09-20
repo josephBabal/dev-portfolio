@@ -1,0 +1,54 @@
+.section {
+  padding-bottom: 40px;
+}
+
+.section > *:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.container {
+  padding-block: 4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* flex-wrap: wrap; */
+  gap: 1.6rem;
+}
+
+.title {
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.description {
+  font-size: 1.8rem;
+}
+
+.experience_container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
+
+.experience_company {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-block: 8rem;
+  }
+
+  .content {
+    gap: 3.2rem;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .experience_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+}

@@ -9,4 +9,4 @@ export type Project = {
   alt: string;
   onGoing: boolean;
   description: string;
-}
+};
