@@ -1,7 +1,7 @@
 .container {
   position: relative;
-  height: 100dvh;        
-  overflow: hidden;          
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .loading_container {
@@ -31,7 +31,7 @@
   justify-content: center;
   margin-bottom: 2.4rem;
   color: white;
-  font-size: 4.0rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .loading_bar {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   width: 0;

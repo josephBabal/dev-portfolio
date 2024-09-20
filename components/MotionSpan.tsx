@@ -2,5 +2,4 @@
 
 import { motion } from "framer-motion";
 
-
-export const MotionSpan = motion.span
+export const MotionSpan = motion.span;

@@ -73,8 +73,6 @@ const useMouseMove = () => {
       cursor.style.display = "block";
     };
 
-
-
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("visibilitychange", handleVisibilityChange);
     window.addEventListener("blur", handleWindowBlur);
@@ -83,36 +81,35 @@ const useMouseMove = () => {
     document.querySelectorAll(".nav-link").forEach((link) => {
       (link as HTMLElement).addEventListener(
         "mouseenter",
-        handleMouseEnterNavLink as EventListener
+        handleMouseEnterNavLink as EventListener,
       );
       (link as HTMLElement).addEventListener(
         "mouseleave",
-        handleMouseLeaveNavLink as EventListener
+        handleMouseLeaveNavLink as EventListener,
       );
     });
 
     document.querySelectorAll(".social-icon-link").forEach((link) => {
       (link as HTMLElement).addEventListener(
         "mouseenter",
-        handleMouseEnterSocialIcon
+        handleMouseEnterSocialIcon,
       );
       (link as HTMLElement).addEventListener(
         "mouseleave",
-        handleMouseLeaveSocialIcon
+        handleMouseLeaveSocialIcon,
       );
     });
 
     document.querySelectorAll(".footer-container").forEach((link) => {
       (link as HTMLElement).addEventListener(
         "mouseenter",
-        handleMouseEnterFooter
+        handleMouseEnterFooter,
       );
       (link as HTMLElement).addEventListener(
         "mouseleave",
-        handleMouseLeaveFooter
+        handleMouseLeaveFooter,
       );
     });
-
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -125,36 +122,35 @@ const useMouseMove = () => {
       document.querySelectorAll(".nav-link").forEach((link) => {
         (link as HTMLElement).removeEventListener(
           "mouseenter",
-          handleMouseEnterNavLink as EventListener
+          handleMouseEnterNavLink as EventListener,
         );
         (link as HTMLElement).removeEventListener(
           "mouseleave",
-          handleMouseLeaveNavLink as EventListener
+          handleMouseLeaveNavLink as EventListener,
         );
       });
 
       document.querySelectorAll(".social-icon-link").forEach((link) => {
         (link as HTMLElement).removeEventListener(
           "mouseenter",
-          handleMouseEnterSocialIcon
+          handleMouseEnterSocialIcon,
         );
         (link as HTMLElement).removeEventListener(
           "mouseleave",
-          handleMouseLeaveSocialIcon
+          handleMouseLeaveSocialIcon,
         );
       });
 
       document.querySelectorAll(".footer-container").forEach((link) => {
         (link as HTMLElement).removeEventListener(
           "mouseenter",
-          handleMouseEnterFooter
+          handleMouseEnterFooter,
         );
         (link as HTMLElement).removeEventListener(
           "mouseleave",
-          handleMouseLeaveFooter
+          handleMouseLeaveFooter,
         );
       });
-  
     };
   }, []);
 };

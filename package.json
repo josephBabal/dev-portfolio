@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"app/**/*.{js,jsx,ts,tsx,css,scss,md}\" \"types/**/*.{js,jsx,ts,tsx,css,scss,md}\" \"components/**/*.{js,jsx,ts,tsx,css,scss,md}\"  \"data/**/*.{js,jsx,ts,tsx,css,scss,md,json}\" \"hooks/**/*.{js,jsx,ts,tsx,css,scss,md}\" \"styles/**/*.{js,jsx,ts,tsx,css,scss,md}\" \"utils/**/*.{js,jsx,ts,tsx,css,scss,md}\" \"package.json\" \"prettier.config.ts\" \"README.md\" \"tsconfig.json\""
   },
   "dependencies": {
     "framer-motion": "^11.5.2",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/prettier": "^3.0.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

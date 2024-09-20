@@ -6,7 +6,9 @@
   align-items: center;
 }
 
-.github_bg, .gmail_bg, .linkedin_bg {
+.github_bg,
+.gmail_bg,
+.linkedin_bg {
   position: absolute;
   padding: 3rem;
   border-radius: 50%;
@@ -43,10 +45,10 @@
   height: 36px;
 }
 
-
-
 @media screen and (min-width: 480px) {
-  .github_bg, .gmail_bg, .linkedin_bg {
+  .github_bg,
+  .gmail_bg,
+  .linkedin_bg {
     padding: 3.25rem;
   }
 
@@ -57,8 +59,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .github_bg, .gmail_bg, .linkedin_bg {
-    padding: 3.75rem; 
+  .github_bg,
+  .gmail_bg,
+  .linkedin_bg {
+    padding: 3.75rem;
   }
 
   .icon_container .icon {

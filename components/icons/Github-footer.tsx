@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 
 export const GithubFooter = () => {
@@ -6,5 +6,5 @@ export const GithubFooter = () => {
     <a href="https://github.com/JosephBabal">
       <IoLogoGithub />
     </a>
-  )
-}
+  );
+};

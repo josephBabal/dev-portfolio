@@ -1,14 +1,14 @@
 .container {
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(1fr);
   gap: 0;
-  padding-block: 4rem;
+  padding-block: 4rem 2rem;
 }
 
 .text_container {
-  padding-inline: 2.4rem;
+  /* padding-inline: 2.4rem; */
 }
 
 .text_little {
@@ -30,8 +30,10 @@
   object-fit: cover;
 }
 
-
 @media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   .text_little {
     font-size: 4.4rem;
   }
@@ -40,17 +42,16 @@
     font-size: 8rem;
     font-weight: 500;
   }
-
 }
 
 @media screen and (min-width: 864px) {
   .container {
-    padding-block: 8rem;
+    padding-block: 8rem 4rem;
     gap: 3.2rem;
   }
 
   .text_big {
-    margin-left: 3.0rem;
+    margin-left: 3rem;
   }
 
   .img {

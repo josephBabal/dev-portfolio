@@ -8,10 +8,12 @@ import SectionFooterLayout from "@/components/layouts/SectionFooterLayout";
 import ScrollSection from "@/components/layouts/ScrollSection";
 
 const HomeVariants = {
-  hidden: { display: 'none'},
-visible: { display: 'block', transition: { duration: 0.5, ease: "easeIn", delay: DELAY } },
-}
-
+  hidden: { display: "none" },
+  visible: {
+    display: "block",
+    transition: { duration: 0.5, ease: "easeIn", delay: DELAY },
+  },
+};
 
 export default async function Home() {
   return (
@@ -21,5 +23,3 @@ export default async function Home() {
     </main>
   );
 }
-
-

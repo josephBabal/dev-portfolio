@@ -16,7 +16,6 @@ export default function MainLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const [loading, setLoading] = useState(true);
   const [isPageTransition, setIsPageTransition] = useState(false);
   const pathname = usePathname();
@@ -35,35 +34,28 @@ export default function MainLayout({
     // Use a timeout to simulate the transition completion
     const timeoutId = setTimeout(() => {
       handleComplete();
-      console.log(isPageTransition)
-    }, 500); // Adjust the duration as needed
+      console.log(isPageTransition);
+    }, 500);
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, [pathname]);
 
-
-
   return (
     <AnimatePresence mode="wait">
       {loading ? (
         <motion.div key="loader">
-          <LoadingScreen 
-            setLoading={setLoading} 
-            key={"load"}
-          /> 
+          <LoadingScreen setLoading={setLoading} key={"load"} />
         </motion.div>
-      ) 
-      : isPageTransition ? (
+      ) : isPageTransition ? (
         <PageTransition />
-      )
-       : (
-        <motion.div 
+      ) : (
+        <motion.div
           key="content"
-          initial="hidden" 
-          animate="visible" 
-          exit="exit" 
+          initial="hidden"
+          animate="visible"
+          exit="exit"
         >
           {/* <CustomCursor /> */}
           <Navbar />
@@ -74,5 +66,3 @@ export default function MainLayout({
     </AnimatePresence>
   );
 }
-
-

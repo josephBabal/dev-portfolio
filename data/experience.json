@@ -3,8 +3,8 @@
     "id": 1,
     "company": "OpenSesame",
     "position": "Software Engineer Intern",
-    "startDateYear": "2024",
-    "endDateYear": "2024",
+    "startDateYear": 2024,
+    "endDateYear": 2024,
     "current": false
   }
 ]
