@@ -62,7 +62,7 @@
   color: white;
 }
 
-.social_container .icons_container .icon::before {
+/* .social_container .icons_container .icon::before {
   content: "";
   position: absolute;
   top: 0;
@@ -71,11 +71,11 @@
   height: 100%;
   background: none;
   transition: 0.3s ease-out;
-}
+} */
 
-.social_container .icons_container .icon:hover::before {
+/* .social_container .icons_container .icon:hover {
   background: rgba(0, 0, 0, 0.3);
-}
+} */
 
 @media screen and (min-width: 768px) {
   .connect_container {
