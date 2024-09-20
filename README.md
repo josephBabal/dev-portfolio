@@ -2,7 +2,11 @@
 # Joseph Babal Portfolio
 
 
+
 This is my personal developer portfolio showcasing the projects I've built and my experience as a Full-Stack Developer. The site also highlights my skills, professional background, and interests outside of coding.
+
+This project is deployed <a href="https://josephbabal.vercel.app" title="Anime Domain"> here </a>
+
 
 ## Tech Stack
 * <a href="https://nextjs.org" > Next.js </a>
