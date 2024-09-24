@@ -46,7 +46,7 @@ const Hero = async () => {
           <OverflowHiddenContainer>
             <MotionDiv variants={textVariants}>
               {" "}
-              A full-stack developer that
+              A Full-Stack developer that
             </MotionDiv>
 
             <MotionDiv variants={textVariants2}>
